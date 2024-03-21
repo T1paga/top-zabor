@@ -1,0 +1,203 @@
+.catalog {
+  &__container {
+  }
+  &__title {
+    color: $textColorDark;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 70px;
+  }
+  &__tiles {
+    margin-bottom: 50px;
+  }
+  &__tile {
+    max-width: 190px;
+    border-radius: 10px;
+    padding: 17.5px 0;
+    background: #f7f6f9;
+    color: $textColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+
+    &-active {
+      background: $baseColor;
+    }
+  }
+  &__cards {
+    flex-wrap: wrap;
+    display: flex;
+    margin: 0 -11px;
+    gap: 22px 0;
+  }
+  &__card {
+    //  max-height: 465px;
+    padding: 0 11px;
+    overflow: hidden;
+    position: relative;
+    width: calc(33.333%);
+  }
+  &__card__img {
+    position: absolute;
+    bottom: 0;
+    right: 11px;
+  }
+  &__card__container {
+    height: 100%;
+    border-radius: 15px;
+    padding: 40px;
+    background-color: $cardColor;
+  }
+  &__card__container--last {
+    padding: 20px;
+  }
+  &__card__more--last {
+    background-color: $bodyColor;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
+  &__card__text--last {
+    position: absolute;
+    font-family: var(--second-family);
+    font-size: 32px;
+    line-height: 78%;
+    color: #322f2f;
+    max-width: 200px;
+    text-align: center;
+  }
+  &_card__img--last {
+  }
+  &__card__title {
+    font-size: 32px;
+    line-height: 104%;
+    margin-bottom: 60px;
+  }
+  &__card__title-accent {
+    color: $textColorGray;
+  }
+  &__card__info {
+  }
+  &__card__list {
+    display: flex;
+    gap: 29px;
+    flex-direction: column;
+    margin-bottom: 29px;
+  }
+  &__card__point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-height: 30px;
+  }
+  &__card__icon {
+    margin-top: -18px;
+  }
+  &__card__text {
+    margin: 0;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  &__card__price {
+    margin-bottom: 23px;
+  }
+  &__card__ruble {
+    color: #9c9c9c;
+  }
+
+  &__card__button {
+    position: relative;
+    width: 214px;
+    background-color: $baseColor;
+    text-align: right;
+    padding: 13px 45px;
+    border-radius: 10px;
+    height: 60px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+  &__card__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+
+    img {
+      width: 15px;
+      height: 15px;
+    }
+  }
+}
+
+@include media($tablet) {
+  .catalog {
+    &__title {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+    &__tiles {
+      margin-bottom: 30px;
+    }
+    &__tile {
+      font-size: 18px;
+    }
+    &__cards {
+      margin: 0 -11px;
+      display: flex;
+    }
+    &__card {
+      padding: 0 11px;
+      width: calc(50%);
+    }
+    &__card__img {
+    }
+    &__card__container {
+      padding: 30px;
+    }
+    &__card__title {
+      font-size: 25px;
+      margin-bottom: 40px;
+    }
+    &__card__button {
+      position: relative;
+      width: 214px;
+      background-color: $baseColor;
+      text-align: right;
+      padding: 13px 45px;
+      border-radius: 10px;
+      height: 60px;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+    }
+    &__card__slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff;
+      position: absolute;
+      top: 0;
+      left: -1px;
+      height: 60px;
+      width: 60px;
+      border-radius: 10px;
+
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+}

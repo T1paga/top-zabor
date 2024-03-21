@@ -1,19 +1,14 @@
 <!DOCTYPE html>
-    <html lang="ru">
-    @@include('html/head.html', {
-        'title': 'SITE'
-    })
-    <body>
-        @@include('html/ExHeader.html', {})
-        @@include('html/ExCookie.html', {})
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Топ забор' })
+  <body>
+    @@include('html/ExHeader.html', {})
+    <!-- @@include('html/ExCookie.html', {}) -->
 
-        <main class="main">
-            @@include('html/ExCentered-gallery.html', {})
-            @@include('html/ExGallery.html', {})
-            @@include('html/ExAccordion.html', {})
-        </main>
+    <main class="main">
+      @@include('html/Infoblock.html') @@include('html/Catalog.html')
+    </main>
 
-        @@include('html/ExFooter.html', {})
-        @@include('html/script.html', {})
-    </body>
-</html> 
+    @@include('html/ExFooter.html', {}) @@include('html/script.html', {})
+  </body>
+</html>

@@ -1,42 +1,51 @@
 @font-face {
-	font-family: Circe;
-	font-display: swap;
-	src: url("../fonts/Circe-Regular.woff2") format("woff2"), url("../fonts/Circe-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Circe;
+  font-display: swap;
+  src: url('../fonts/Circe-Regular.woff2') format('woff2'),
+    url('../fonts/Circe-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
 @font-face {
-	font-family: Circe;
-	font-display: swap;
-	src: url("../fonts/Circe-Bold.woff2") format("woff2"), url("../fonts/Circe-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
+  font-family: Circe;
+  font-display: swap;
+  src: url('../fonts/Circe-Bold.woff2') format('woff2'),
+    url('../fonts/Circe-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Bold.woff2") format("woff2"), url("../fonts/Raleway-Bold.woff") format("woff");
-	font-weight: 700;
-	font-style: normal;
+  font-family: Raleway;
+  font-display: swap;
+  src: url('../fonts/Raleway-Bold.woff2') format('woff2'),
+    url('../fonts/Raleway-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
 }
 @font-face {
-	font-family: TildaSans;
-	font-display: swap;
-	src: url("../fonts/TildaSans-VF.woff2") format("woff2"), url("../fonts/TildaSans-VF.woff") format("woff");
-	font-weight: undefined;
-	font-style: normal;
+  font-family: TildaSans;
+  font-display: swap;
+  src: url('../fonts/TildaSans-VF.woff2') format('woff2'),
+    url('../fonts/TildaSans-VF.woff') format('woff');
+  font-weight: undefined;
+  font-style: normal;
 }
 @font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Black.woff2") format("woff2"), url("../fonts/Raleway-Black.woff") format("woff");
-	font-weight: 900;
-	font-style: normal;
+  font-family: Raleway;
+  font-display: swap;
+  src: url('../fonts/Raleway-Black.woff2') format('woff2'),
+    url('../fonts/Raleway-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
 }
 @font-face {
-	font-family: Raleway;
-	font-display: swap;
-	src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
-	font-weight: 400;
-	font-style: normal;
+  font-family: Raleway;
+  font-display: swap;
+  src: url('../fonts/Raleway-Regular.woff2') format('woff2'),
+    url('../fonts/Raleway-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');

@@ -1,0 +1,45 @@
+.how {
+  .container {
+    background-color: $cardColor;
+  }
+
+  &__title {
+    margin-bottom: 0px !important;
+  }
+
+  &__container {
+    border-radius: 10px;
+    padding: 50px;
+  }
+
+  &__steps {
+  }
+  &__steps--container {
+    position: relative;
+    display: flex;
+    margin: 0 -29px;
+  }
+  &__step {
+    padding: 0 29px;
+    width: calc(100% / 6);
+  }
+  &__step--container {
+  }
+  &__step--info {
+    padding: 18px 20px;
+    background-color: #959194;
+    border-radius: 8px;
+    font-size: 15px;
+    color: white;
+  }
+}
+
+// .buttom-line {
+//   position: absolute;
+//   bottom: 74px;
+//   left: 0;
+//   right: 0;
+//   height: 3px;
+//   width: 100%;
+//   border-bottom: 3px solid red;
+// }

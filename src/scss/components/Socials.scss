@@ -1,0 +1,82 @@
+.socials {
+  position: relative;
+
+  &__container {
+    position: relative;
+    border-radius: 10px;
+    background-color: $cardColor;
+    padding: 62px 0;
+
+    background-image: url('../../images/topzabor-bg.png');
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: contain;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 86%;
+    text-align: center;
+    color: #525252;
+    max-width: 600px;
+  }
+  &__subtitle {
+    font-size: 40px;
+    line-height: 92%;
+    text-align: center;
+    color: #525252;
+    margin-bottom: 60px;
+  }
+  &__list {
+    display: flex;
+    gap: 15px;
+  }
+  &__icon {
+  }
+
+  &__air {
+    max-width: 50%;
+    position: absolute;
+    top: -10%;
+    right: -10%;
+    object-fit: cover;
+  }
+}
+
+@include media($laptop) {
+  .socials {
+    &__air {
+      max-width: 40%;
+    }
+  }
+}
+
+@include media($tablet) {
+  .socials {
+    &__air {
+      max-width: 35%;
+    }
+  }
+}
+
+@include media($mobile-tablet) {
+  .socials {
+    &__air {
+      max-width: 30%;
+    }
+  }
+}
+
+@include media($mobile) {
+  .socials {
+    &__air {
+      display: none;
+    }
+  }
+}

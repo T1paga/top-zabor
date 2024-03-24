@@ -1,0 +1,112 @@
+.footer {
+  margin: 100px 32px 135px 32px;
+
+  .container {
+    display: flex;
+  }
+
+  &__row--about {
+    flex: 1 0 20%;
+    min-width: 250px;
+  }
+
+  &__rows {
+    flex: 0 1 80%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px 0px;
+  }
+
+  &__row {
+    // width: calc(33.333%);
+  }
+
+  &__row1 {
+    width: calc(40%);
+  }
+
+  &__row2 {
+    width: calc(30%);
+  }
+
+  &__row3 {
+    width: calc(30%);
+  }
+
+  &__row--container {
+    padding: 0 10px;
+  }
+
+  &__logo {
+    width: 243px;
+    height: 26px;
+    object-fit: contain;
+  }
+  &__socials {
+    display: flex;
+    gap: 23px;
+  }
+  &__social {
+    height: 65px;
+    width: 65px;
+    object-fit: cover;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 23px;
+    text-align: left;
+    color: #000;
+    margin-bottom: 33px;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__text {
+    margin: 0;
+    font-size: 21px;
+  }
+  &__text--bold {
+    font-weight: 600;
+  }
+}
+
+@include media($tablet) {
+  .footer {
+    margin: 66px 24px 95px 24px;
+
+    &__rows {
+      gap: 40px 0px;
+    }
+    &__row {
+      width: calc(50%);
+    }
+  }
+}
+
+@include media($mobile-tablet) {
+  .footer {
+    margin: 44px 16px 60px 16px;
+
+    &__row {
+      width: calc(100%);
+    }
+  }
+}
+
+@include media($mobile) {
+  .footer {
+    .container {
+      display: block;
+    }
+
+    &__row--about {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      margin-bottom: 16px;
+    }
+  }
+}

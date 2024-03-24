@@ -1,0 +1,76 @@
+<button class="uk-modal-close-default" type="button" uk-close></button>
+
+<section>
+  <div class="container">
+    <form class="uk-form-stacked callback-popup__form">
+      <div class="uk-modal-header">
+        <div class="text_huge callback-popup__title">
+          Не нашли своего вопроса?
+        </div>
+        <p class="callback-popup__subtitle">
+          Оставьте заявку и наш менеджер свяжется с вами
+        </p>
+      </div>
+      <div class="uk-modal-body callback-popup__content">
+        <div class="uk-margin">
+          <div class="uk-form-controls popups__list">
+            <input
+              type="text"
+              name="phone"
+              class="uk-input callback-popup__phone-input popups__element"
+              placeholder="Ваш телефон"
+              required=""
+              inputmode="text"
+            />
+            <input
+              type="text"
+              name="name"
+              class="uk-input callback-popup__phone-input popups__element"
+              placeholder="Ваше имя"
+              required=""
+              inputmode="text"
+            />
+            <button
+              type="submit"
+              class="btn callback-popup__submit-btn popup__button popups__element"
+            >
+              Отправить
+            </button>
+          </div>
+        </div>
+        <!-- <div class="uk-modal-footer uk-text-center">
+          <button type="submit" class="btn callback-popup__submit-btn">
+            Отправить
+          </button>
+        </div> -->
+        <!-- <div class="uk-margin">
+          <span class="text callback-popup__policy-text"
+            >Отправляя заявку, вы соглашаетесь
+            <a class="callback-popup__policy-link" href="/privacy-policy/"
+              >политикой обработки данных</a
+            ></span
+          >
+        </div> -->
+      </div>
+    </form>
+  </div>
+</section>
+
+<div
+  id="callback-popup-success"
+  class="popup callback-popup-success"
+  uk-modal-full
+  uk-modal
+>
+  <div
+    class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical popup__frame"
+  >
+    <button class="uk-modal-close-default" type="button" uk-close></button>
+    <div class="uk-modal-header">
+      <span class="text_huge">Обращение отправлено</span>
+    </div>
+    <div class="uk-modal-body">
+      <span class="text">Мы свяжемся с вами в ближайшее время!</span>
+    </div>
+  </div>
+</div>

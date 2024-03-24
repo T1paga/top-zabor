@@ -1,0 +1,66 @@
+.contacts {
+  &__cards {
+  }
+
+  &__card {
+    flex: 0 1 50%;
+  }
+
+  &__title {
+    font-size: 30px;
+    color: $btnDarkBgColor;
+    margin-bottom: 45px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    gap: 12px;
+  }
+
+  &__square {
+    width: 56px;
+    height: 56px;
+    background-color: $baseColor;
+    padding: 14px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon {
+  }
+
+  &__text {
+  }
+
+  &__frame {
+    height: 100%;
+    width: 100%;
+  }
+
+  &__map {
+    border-radius: 14px;
+    height: 310px;
+  }
+}
+
+@include media($mobile-tablet) {
+  .contacts {
+    &__card {
+      flex-basis: 100%;
+    }
+
+    &__item {
+      width: 100%;
+    }
+  }
+}

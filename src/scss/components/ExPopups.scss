@@ -1,38 +1,99 @@
-.popup {
-    z-index: 1050;
+// .popup {
+//   z-index: 1050;
+//   text-align: center;
+
+//   &__frame {
+//     border-radius: 5px;
+//     width: 700px;
+//   }
+// }
+
+.callback-popup {
+  &__frame {
+  }
+
+  &__form {
+    background-color: $cardColor;
+    border-radius: 10px;
+    padding: 54px 110px 34px 110px;
+
+    .uk-modal-header,
+    .uk-modal-footer {
+      padding: 0;
+      border: none;
+      background-color: $cardColor !important;
+    }
+  }
+
+  &__button {
+    background-color: $baseColor;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 100%;
     text-align: center;
+    color: #1e1e1e;
+    margin-bottom: 23px;
+  }
 
-    &__frame {
-        border-radius: 5px;
-        width: 700px;
-    }
+  &__subtitle {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 23px !important;
+    margin: 0;
+  }
+
+  &__content {
+    border-radius: 10px;
+    padding: 0;
+  }
+
+  &__phone-input {
+  }
 }
 
-.callback-popup{
-    &__frame {
+.popups__list {
+  display: flex;
+  gap: 33px;
+  border-radius: 10px;
+}
 
-    }
+.popups__element {
+  height: 100%;
+  flex: 0 1 33%;
+  padding: 22px;
+  border-radius: 10px;
+}
 
+.popup__button {
+  background-color: $baseColor;
+}
+
+@include media($tablet) {
+  .popups__list {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .popups__element {
+    height: 100%;
+    flex: 0 1 100%;
+    padding: 22px;
+    border-radius: 10px;
+  }
+  .callback-popup {
     &__form {
+      padding: 27px 55px 17px 55px;
     }
-
-    &__title {
-        
-    }
-
-    &__content {
-
-    }
-
-    &__phone-input {
-        
-    }
+  }
 }
 
-@include media($tablet){
-    
-}
-
-@include media($mobile){
-
+@include media($mobile) {
+  .callback-popup {
+    &__form {
+      padding: 15px 30px 15px 30px;
+    }
+  }
 }

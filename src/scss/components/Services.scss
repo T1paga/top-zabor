@@ -1,0 +1,32 @@
+.services {
+  &__container {
+    position: relative;
+  }
+
+  &__cards {
+  }
+
+  &__card {
+    height: 500px;
+  }
+
+  &__card__icon {
+    margin-bottom: 10px;
+  }
+
+  &__card__title {
+    margin-bottom: 20px !important;
+  }
+
+  &__card__text {
+    max-width: 265px;
+  }
+
+  &__card--image {
+  }
+  &__card--button {
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+  }
+}

@@ -1,0 +1,38 @@
+.examples {
+  .block__card__container {
+    background-color: transparent;
+  }
+
+  .block__card__container--last {
+    background-color: $cardColor;
+  }
+}
+
+.examples__card {
+  height: 465px;
+  background-size: cover;
+  border-radius: 10px;
+}
+
+.examples__button {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.examples__info {
+  padding: 15px;
+  background-color: $bodyColor;
+  display: inline-block;
+  border-radius: 10px;
+  vertical-align: middle;
+}
+
+.examples__text {
+  margin: 0;
+}
+
+.examples__card__container {
+  background: url('../../images/examples/ex1.png');
+  background-color: none !important;
+}

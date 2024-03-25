@@ -35,6 +35,11 @@
     border-radius: 10px;
     display: flex;
     align-items: center;
+    transition: background-color 0.3s ease;
+
+    @include any-hover() {
+      background-color: $orangeHover;
+    }
   }
 
   &__icon {

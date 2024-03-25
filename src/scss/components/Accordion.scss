@@ -23,6 +23,9 @@ li {
     background-color: $lightGray;
     padding: 25px 30px;
     border-radius: 10px;
+    a {
+      text-decoration: none;
+    }
   }
 
   &__list-item-title {

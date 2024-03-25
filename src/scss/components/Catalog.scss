@@ -71,7 +71,7 @@
 
     &-icon {
       @include any-hover() {
-        ~ &-detailed {
+        .catalog__card__price-icon &-detailed {
           opacity: 1;
         }
       }

@@ -18,9 +18,10 @@
 @import 'config/common';
 
 /** Подключение стилей отдельных блоков и секций */
-@import 'components/ExHeader';
+@import 'components/Header';
 @import 'components/ExBurger';
-@import 'components/ExBurger-menu';
+@import 'components/Burger-menu';
+@import 'components/Nav-menu.scss';
 @import 'components/Footer';
 @import 'components/ExCentered-gallery';
 @import 'components/ExGallery';
@@ -35,3 +36,4 @@
 @import 'components/Contacts';
 @import 'components/How';
 @import 'components/Socials';
+@import 'components/Burger';

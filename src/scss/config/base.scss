@@ -76,7 +76,7 @@ a[href*='tel:'] {
 }
 
 section {
-  margin-top: 100px;
+  margin-bottom: 100px;
   position: relative;
 }
 
@@ -427,4 +427,22 @@ button {
   html {
     font-size: rem(10);
   }
+}
+
+.uk-navbar-container {
+  background-color: transparent !important;
+}
+
+.uk-navbar-nav > li > a {
+  font-size: rem(18);
+  color: $textColorBlack;
+  text-transform: none;
+}
+
+.uk-navbar-nav > li > a {
+  min-height: 0;
+}
+
+.uk-navbar {
+  padding: 18px 0;
 }

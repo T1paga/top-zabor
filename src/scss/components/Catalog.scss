@@ -7,14 +7,14 @@
     border-radius: 10px;
     padding: 17.5px 0;
     background: #f7f6f9;
-    color: $textColor;
+    color: $textColorBlack;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: rem(20);
 
     &-active {
-      background: $baseColor;
+      background: $orange;
     }
   }
   &__card__img {
@@ -43,7 +43,6 @@
 
   &__card__text {
     margin: 0;
-    font-size: 16px;
     line-height: 19px;
   }
   &__card__price {
@@ -70,10 +69,15 @@
       background: gray;
     }
 
-    &-icon:hover ~ &-detailed {
-      opacity: 1;
+    &-icon {
+      @include any-hover() {
+        ~ &-detailed {
+          opacity: 1;
+        }
+      }
     }
   }
+
   &__card__ruble {
     color: #9c9c9c;
   }
@@ -93,10 +97,10 @@
       margin-bottom: 30px;
     }
     &__tile {
-      font-size: 18px;
+      font-size: rem(18);
     }
     &__card__title {
-      font-size: 25px;
+      font-size: rem(25);
       margin-bottom: 40px;
     }
   }
@@ -108,7 +112,7 @@
       margin-bottom: 30px;
     }
     &__tile {
-      font-size: 18px;
+      font-size: rem(18);
     }
 
     &__card {
@@ -119,7 +123,7 @@
       &__img {
       }
       &__title {
-        font-size: 25px;
+        font-size: rem(25);
         margin-bottom: 30px;
       }
     }

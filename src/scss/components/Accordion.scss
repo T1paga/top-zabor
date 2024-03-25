@@ -20,14 +20,14 @@ li {
   }
 
   &__list-item {
-    background-color: $cardColor;
+    background-color: $lightGray;
     padding: 25px 30px;
     border-radius: 10px;
   }
 
   &__list-item-title {
     color: $btnDarkBgColor;
-    font-size: 32px;
+    font-size: rem($textSizeS);
     font-weight: 400;
   }
 

@@ -4,7 +4,7 @@
   &__container {
     position: relative;
     border-radius: 10px;
-    background-color: $cardColor;
+    background-color: $lightGray;
     padding: 62px 0;
 
     background-image: url('../../images/topzabor-bg.png');
@@ -20,14 +20,14 @@
   }
   &__title {
     font-weight: 500;
-    font-size: 64px;
+    font-size: rem(64);
     line-height: 86%;
     text-align: center;
     color: #525252;
     max-width: 600px;
   }
   &__subtitle {
-    font-size: 40px;
+    font-size: rem($textSizeL);
     line-height: 92%;
     text-align: center;
     color: #525252;

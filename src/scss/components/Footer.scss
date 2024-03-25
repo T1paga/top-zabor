@@ -53,7 +53,7 @@
   }
   &__title {
     font-weight: 600;
-    font-size: 23px;
+    font-size: rem(23);
     text-align: left;
     color: #000;
     margin-bottom: 33px;
@@ -65,7 +65,7 @@
   }
   &__text {
     margin: 0;
-    font-size: 21px;
+    font-size: rem(21);
   }
   &__text--bold {
     font-weight: 600;

@@ -13,7 +13,7 @@
   }
 
   &__form {
-    background-color: $cardColor;
+    background-color: $lightGray;
     border-radius: 10px;
     padding: 54px 110px 34px 110px;
 
@@ -21,17 +21,17 @@
     .uk-modal-footer {
       padding: 0;
       border: none;
-      background-color: $cardColor !important;
+      background-color: $lightGray !important;
     }
   }
 
   &__button {
-    background-color: $baseColor;
+    background-color: $orange;
   }
 
   &__title {
     font-weight: 500;
-    font-size: 32px;
+    font-size: rem($textSizeS);
     line-height: 100%;
     text-align: center;
     color: #1e1e1e;
@@ -39,7 +39,7 @@
   }
 
   &__subtitle {
-    font-size: 20px;
+    font-size: rem(20);
     text-align: center;
     margin-bottom: 23px !important;
     margin: 0;
@@ -68,7 +68,7 @@
 }
 
 .popup__button {
-  background-color: $baseColor;
+  background-color: $orange;
 }
 
 @include media($tablet) {

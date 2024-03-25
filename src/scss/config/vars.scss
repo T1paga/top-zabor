@@ -4,17 +4,15 @@ $mobile-tablet: 768;
 $mobile: 640;
 
 //-----------------------------------------
-$baseColor: #ff8500;
-$bodyColor: #fff;
-$frameColor: #ffffffb8;
-$cardColor: #f7f6f9;
+$orange: #ff8500;
+$white: #fff;
+$lightGray: #f7f6f9;
 $overlayColor: #000000aa;
 //-----------------------------------------
-$textColor: #000000;
+$textColorBlack: #000000;
 $textColorLight: #ffffff;
-$textColorDark: #858688;
-$textColorGray: #a1a1a1;
-$textColorAccent: #ff8500;
+$textColorGray: #858688;
+$textColorLightGray: #a1a1a1;
 //-----------------------------------------
 $linkColor: #237fcf;
 //-----------------------------------------
@@ -34,3 +32,6 @@ $borderColorLight: #ffffff;
 $sliderBtnColor: #113d63;
 $lightboxBtnColor: #ffffff;
 //-----------------------------------------
+$textSizeL: 40;
+$textSizeM: 36;
+$textSizeS: 32;

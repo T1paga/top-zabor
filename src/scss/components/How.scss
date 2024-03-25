@@ -1,6 +1,6 @@
 .how {
   .container {
-    background-color: $cardColor;
+    background-color: $lightGray;
   }
 
   &__title {
@@ -29,7 +29,7 @@
     padding: 18px 20px;
     background-color: #959194;
     border-radius: 8px;
-    font-size: 15px;
+    font-size: rem(15);
     color: white;
   }
 }

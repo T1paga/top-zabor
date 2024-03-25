@@ -7,7 +7,7 @@
   }
 
   &__title {
-    font-size: 30px;
+    font-size: rem(30);
     color: $btnDarkBgColor;
     margin-bottom: 45px;
   }
@@ -17,6 +17,7 @@
     justify-content: space-between;
     flex-wrap: wrap;
     margin-bottom: 10px;
+    gap: 10px 0;
   }
 
   &__item {
@@ -29,7 +30,7 @@
   &__square {
     width: 56px;
     height: 56px;
-    background-color: $baseColor;
+    background-color: $orange;
     padding: 14px;
     border-radius: 10px;
     display: flex;

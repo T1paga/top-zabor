@@ -7,26 +7,43 @@
   }
 
   &__card {
+  }
+
+  &__card__container {
+    padding: 0;
+    background-color: $lightGray;
+    border-radius: 15px;
     height: 500px;
   }
 
   &__card__icon {
     margin-bottom: 10px;
+    padding: 30px;
   }
 
   &__card__title {
     margin-bottom: 20px !important;
+    padding: 0 30px;
   }
 
   &__card__text {
-    max-width: 265px;
+    max-width: 355px;
+    padding: 0 30px;
   }
 
-  &__card--image {
+  &__card__img {
+    // position: absolute;
+    // bottom: 0;
+    // left: 11px;
   }
+
   &__card--button {
     position: absolute;
     left: 30px;
     bottom: 30px;
   }
+}
+
+.services__card__container:nth-child(2) {
+  width: 30%;
 }

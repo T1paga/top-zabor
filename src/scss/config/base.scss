@@ -78,6 +78,7 @@ a[href*='tel:'] {
 section {
   margin-bottom: 100px;
   position: relative;
+  padding: 0 15px;
 }
 
 input {
@@ -115,7 +116,7 @@ textarea {
 .container {
   max-width: 1440px;
   width: 100%;
-  padding: 0 15px;
+  // padding: 0 15px;
   margin: 0 auto;
   height: 100%;
   position: relative;
@@ -282,6 +283,13 @@ button {
   }
 }
 
+.button-absolute {
+  z-index: 100;
+  position: absolute;
+  left: 40px;
+  bottom: 40px;
+}
+
 .block {
   &__container {
   }
@@ -302,6 +310,7 @@ button {
     display: flex;
     margin: 0 -11px;
     gap: 22px 0;
+    align-items: end;
   }
   &__card {
     padding: 0 11px;
@@ -445,4 +454,20 @@ button {
 
 .uk-navbar {
   padding: 18px 0;
+}
+
+.img__right {
+  position: absolute;
+  bottom: 0;
+  right: 11px;
+}
+
+.img__left {
+  position: absolute;
+  bottom: 0;
+  left: 11px;
+}
+
+.card__container--long {
+  height: 584px !important;
 }

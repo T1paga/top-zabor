@@ -5,6 +5,7 @@
 
   .block__card__container--last {
     background-color: $lightGray;
+    height: 465px;
   }
 }
 
@@ -12,12 +13,6 @@
   height: 465px;
   background-size: cover;
   border-radius: 10px;
-}
-
-.examples__button {
-  position: absolute;
-  bottom: 40px;
-  left: 40px;
 }
 
 .examples__info {
@@ -36,4 +31,5 @@
   background: url('../../images/examples/ex1.png');
   background-size: cover !important;
   background-color: none !important;
+  height: 465px;
 }

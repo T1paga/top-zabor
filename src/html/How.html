@@ -5,50 +5,117 @@
       <div class="how__steps--container">
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><div>Оставляете заявку</div></div>
+            <div class="how__step--info" id="step1">
+              <div>Оставляете заявку</div>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><div>Оставляете заявку</div></div>
+            <div class="how__step--info" id="step2">
+              <div>Замер участка</div>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><div>Оставляете заявку</div></div>
+            <div class="how__step--info" id="step3">
+              <div>Проект и КП</div>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><div>Оставляете заявку</div></div>
+            <div class="how__step--info" id="step4">
+              <div>Заключение договора</div>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><div>Оставляете заявку</div></div>
+            <div class="how__step--info" id="step5">
+              <div>Установка забора</div>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
         <div class="how__step">
           <div class="how__step--container">
-            <div class="how__step--info"><span>Оставляете заявку</span></div>
+            <div class="how__step--info" id="step6">
+              <span>Приемка и оплата</span>
+              <div class="step__circle"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+    <div class="container buttom-line"></div>
   </div>
-  <!-- <div class="container buttom-line"></div> -->
 </section>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const stepInfos = document.querySelectorAll('.how__step--info');
-    const marginStep = 33; // Шаг увеличения отступа
-    let marginValue = marginStep * (stepInfos.length - 1); // Начальное значение отступа для последнего элемента
-
-    stepInfos.forEach(function (stepInfo) {
-      stepInfo.style.marginTop = marginValue + 'px'; // Устанавливаем отступ
-
-      marginValue -= marginStep; // Уменьшаем отступ для следующего блока
-    });
-  });
-</script>
+<section class="how-mobile">
+  <div class="container how__container">
+    <h2 class="how__title block__title block__title-right">КАК МЫ РАБОТАЕМ</h2>
+    <div class="order-track">
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Оставляете заявку</p>
+          <!-- <span class="order-track-text-sub">21st November, 2019</span> -->
+        </div>
+      </div>
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Замер участка</p>
+        </div>
+      </div>
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Проект и КП</p>
+        </div>
+      </div>
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Заключение договора</p>
+        </div>
+      </div>
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Установка забора</p>
+        </div>
+      </div>
+      <div class="order-track-step">
+        <div class="order-track-status">
+          <span class="order-track-status-dot"></span>
+          <span class="order-track-status-line"></span>
+        </div>
+        <div class="order-track-text">
+          <p class="order-track-text-stat">Приемка и оплата</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,3 +1,23 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
 .how__container {
   background-color: $lightGray;
 }
@@ -38,6 +58,8 @@
     color: white;
     text-align: center;
     white-space: nowrap;
+    height: 50px;
+    opacity: 0;
   }
 }
 
@@ -86,7 +108,7 @@
   content: '';
   position: absolute;
   left: calc(50% + 1px);
-  top: 0;
+  top: 55px;
   width: 2px;
   border-left: 2px dashed #ccc;
   transform: translateX(-50%);
@@ -100,41 +122,51 @@
 
 #step1 {
   margin-top: rem(165);
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 0.5s;
 
   &::after {
-    height: calc(100% + 50px);
+    height: calc(100%);
   }
 }
 
 #step2 {
   margin-top: rem(132);
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 1s;
 
   &::after {
-    height: calc(100% + 83px);
+    height: calc(100% + 33px);
   }
 }
 
 #step3 {
   margin-top: rem(99);
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 1.5s;
 
   &::after {
-    height: calc(100% + 116px);
+    height: calc(100% + 66px);
   }
 }
 
 #step4 {
   margin-top: rem(66);
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 2s;
 
   &::after {
-    height: calc(100% + 149px);
+    height: calc(100% + 99px);
   }
 }
 
 #step5 {
   margin-top: rem(33);
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 2.5s;
 
   &::after {
-    height: calc(100% + 182px);
+    height: calc(100% + 132px);
   }
 }
 
@@ -142,9 +174,11 @@
   margin-top: rem(0);
   background-color: $orange;
   color: #000;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 3s;
 
   &::after {
-    height: calc(100% + 215px);
+    height: calc(100% + 165px);
   }
 }
 
@@ -163,6 +197,7 @@
   &-step {
     display: flex;
     height: 7rem;
+    opacity: 1;
 
     &:last-child {
       overflow: hidden;
@@ -224,8 +259,6 @@
 .order-track {
   transition: all 0.3s height 0.3s;
   transform-origin: top center;
-  // transform: scale(0);
-  // height: 0;
 }
 
 @include media($tablet) {
@@ -235,5 +268,72 @@
 
   .how-mobile {
     display: block;
+  }
+}
+
+#step1-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 0s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 0.25s;
+  }
+}
+#step2-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 0.5s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 0.75s;
+  }
+}
+#step3-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 1s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 1.25s;
+  }
+}
+#step4-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 1.5s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 1.75s;
+  }
+}
+#step5-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 2s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 2.25s;
+  }
+}
+#step6-mobile {
+  opacity: 0;
+  animation: slideInFromLeft 0.5s ease forwards;
+  animation-delay: 2.5s;
+
+  .order-track-status-line {
+    opacity: 0;
+    animation: slideInFromLeft 1s ease forwards;
+    animation-delay: 2.75s;
   }
 }

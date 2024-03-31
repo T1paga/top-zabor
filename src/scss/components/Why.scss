@@ -12,10 +12,26 @@
   }
 
   &__card {
+  }
+
+  &__card__container {
     height: 584px;
+
+    @include media($mobile-tablet) {
+      height: 450px;
+    }
   }
 
   &__card__title {
+    position: relative;
+    z-index: 1;
+    font-size: 32px;
+    line-height: 104%;
+    color: #a1a1a1;
+
+    span {
+      color: #525252;
+    }
   }
 
   &__card__img {

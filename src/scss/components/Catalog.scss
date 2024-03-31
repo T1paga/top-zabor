@@ -95,7 +95,6 @@
 @include media($laptop) {
   .catalog {
     &__card__img {
-      width: 50%;
     }
   }
 }

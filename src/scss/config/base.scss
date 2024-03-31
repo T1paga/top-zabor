@@ -251,6 +251,7 @@ button {
       display: flex;
       align-items: center;
       padding: 0 45px;
+      white-space: nowrap;
     }
   }
 
@@ -287,7 +288,7 @@ button {
   z-index: 100;
   position: absolute;
   left: 40px;
-  bottom: 40px;
+  bottom: 30px;
 }
 
 .block {
@@ -460,14 +461,44 @@ button {
   position: absolute;
   bottom: 0;
   right: 11px;
+  padding-left: 22px;
 }
 
 .img__left {
   position: absolute;
   bottom: 0;
   left: 11px;
+  padding-right: 22px;
 }
 
 .card__container--long {
   height: 584px !important;
+
+  @include media($tablet) {
+    height: 500px !important;
+  }
+}
+
+.w35 {
+  width: 35%;
+
+  @include media($tablet) {
+    width: 50%;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+  }
+}
+
+.w30 {
+  width: 30%;
+
+  @include media($tablet) {
+    width: 50%;
+  }
+
+  @include media($mobile) {
+    width: 100%;
+  }
 }

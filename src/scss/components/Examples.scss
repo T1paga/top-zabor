@@ -1,4 +1,12 @@
 .examples {
+  &__button {
+    width: 260px !important;
+
+    &-text {
+      padding: 0 25px !important;
+    }
+  }
+
   .block__card__container {
     background-color: transparent;
   }

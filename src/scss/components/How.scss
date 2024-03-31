@@ -62,8 +62,8 @@
   border-radius: 100%;
 
   //anim
-  opacity: 0;
-  @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+  //   opacity: 0;
+  //   @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
 }
 
 .step__circle::before {
@@ -78,8 +78,8 @@
   border-radius: 100%;
 
   //anim
-  opacity: 0;
-  @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+  //   opacity: 0;
+  //   @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
 }
 
 .how__step--info:after {
@@ -94,8 +94,8 @@
   opacity: 1;
 
   //anim
-  opacity: 0;
-  @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
+  //   opacity: 0;
+  //   @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
 }
 
 #step1 {

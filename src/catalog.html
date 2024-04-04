@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Каталог | Топ забор' })
+  <body>
+    @@include('html/Header.html', {})
+    <main class="main container">
+      <section class="">
+        <h1 class="block__title block__title-right">
+          Каталог заборов и ограждений
+        </h1>
+        <div class="catalog__container">
+          <div class="catalog__filters">@@include('html/Filters.html', {})</div>
+          <div class="catalog__items">@@include('html/Catalog.html', {})</div>
+        </div>
+      </section>
+    </main>
+    @@include('html/Footer.html', {}) @@include('html/script.html', {})
+  </body>
+</html>

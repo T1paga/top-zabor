@@ -76,7 +76,7 @@ a[href*='tel:'] {
 }
 
 section {
-  margin-bottom: 100px;
+  margin-top: 100px;
   position: relative;
   padding: 0 15px;
 }
@@ -89,6 +89,10 @@ input {
   &:focus-visible {
     outline: none;
     text-indent: 5px;
+  }
+
+  &:checked {
+    background-color: $orange;
   }
 }
 
@@ -294,10 +298,15 @@ button {
 .block {
   &__container {
   }
+
+  &__title__page {
+    margin-bottom: 50px;
+  }
+
   &__title {
     color: $textColorGray;
     text-align: center;
-    font-size: $textSizeM;
+    font-size: rem($textSizeM);
     font-weight: 400;
     margin-bottom: 70px;
     text-transform: uppercase;

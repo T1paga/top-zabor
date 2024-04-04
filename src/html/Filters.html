@@ -1,0 +1,223 @@
+<button class="open-filters-button">Открыть фильтры</button>
+<div class="filters">
+  <div class="filter">
+    <div class="filter__title">
+      <h2 class="filter__title-text">Цена</h2>
+    </div>
+    <div class="range-price">
+      <div class="filter__input-block">
+        <label for="min">От</label>
+        <input
+          class="input input--price-min"
+          type="number"
+          name="min"
+          value="3000"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+      <div class="filter__input-block">
+        <label for="max">До</label>
+        <input
+          class="input input--price-max"
+          type="number"
+          name="max"
+          value="8000"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+    </div>
+    <div class="range">
+      <div class="range-slider">
+        <span class="range-selected"></span>
+      </div>
+      <div class="range-input">
+        <input
+          type="range"
+          class="min"
+          min="0"
+          max="11000"
+          value="3000"
+          step="100"
+        />
+        <input
+          type="range"
+          class="max"
+          min="0"
+          max="11000"
+          value="8000"
+          step="100"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter__title">
+      <h2 class="filter__title-text">Толщина метала</h2>
+    </div>
+    <div class="range-price">
+      <div class="filter__input-block">
+        <label for="min">От</label>
+        <input
+          class="input input--metal-min"
+          type="number"
+          name="min2"
+          value="0.3"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+      <div class="filter__input-block">
+        <label for="max">До</label>
+        <input
+          class="input input--metal-max"
+          type="number"
+          name="max2"
+          value="0.7"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+    </div>
+    <div class="range">
+      <div class="range-slider">
+        <span class="range-selected"></span>
+      </div>
+      <div class="range-input">
+        <input
+          type="range"
+          class="min"
+          min="0"
+          max="1"
+          value="0.3"
+          step="0.1"
+        />
+        <input
+          type="range"
+          class="max"
+          min="0"
+          max="1"
+          value="0.7"
+          step="0.1"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="filter__title">
+      <h2 class="filter__title-text">Длина секции</h2>
+    </div>
+    <div class="range-price">
+      <div class="filter__input-block">
+        <label for="min">От</label>
+        <input
+          class="input input--section-min"
+          type="number"
+          name="min2"
+          value="0.3"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+      <div class="filter__input-block">
+        <label for="max">До</label>
+        <input
+          class="input input--section-max"
+          type="number"
+          name="max2"
+          value="0.7"
+          readonly
+        />
+        <div class="input-buffer"></div>
+      </div>
+    </div>
+    <div class="range">
+      <div class="range-slider">
+        <span class="range-selected"></span>
+      </div>
+      <div class="range-input">
+        <input
+          type="range"
+          class="min"
+          min="0"
+          max="1"
+          value="0.3"
+          step="0.1"
+        />
+        <input
+          type="range"
+          class="max"
+          min="0"
+          max="1"
+          value="0.7"
+          step="0.1"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="filters__checkbox">
+    <div class="filter">
+      <div class="filter__title">
+        <h2 class="filter__title-text">Модель</h2>
+      </div>
+      <div class="filter__checkboxes">
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Ранчо
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Классика
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Жалюзи
+        </label>
+        <a class="filter__more">Показать еще</a>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter__title">
+        <h2 class="filter__title-text">Бренд</h2>
+      </div>
+      <div class="filter__checkboxes">
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Бренд
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Бренд
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Бренд
+        </label>
+        <a class="filter__more">Показать еще</a>
+      </div>
+    </div>
+    <div class="filter">
+      <div class="filter__title">
+        <h2 class="filter__title-text">Изготовитель</h2>
+      </div>
+      <div class="filter__checkboxes">
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Россия
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Южная Корея
+        </label>
+        <label class="filter__label">
+          <input class="filter__checkbox checkbox-flip" type="checkbox" />
+          Китай
+        </label>
+        <a class="filter__more">Показать еще</a>
+      </div>
+    </div>
+  </div>
+  <script src="../js/range-slider.js"></script>
+  <script src="../js/scripts.js"></script>
+</div>

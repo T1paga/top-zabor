@@ -1,0 +1,139 @@
+.list {
+  &__tiles {
+    margin-bottom: 50px;
+  }
+  &__tile {
+    max-width: 190px;
+    border-radius: 10px;
+    padding: 17.5px 0;
+    background: #f7f6f9;
+    color: $textColorBlack;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(20);
+
+    &-active {
+      background: $orange;
+    }
+  }
+
+  &__card__container {
+    height: 465px;
+  }
+
+  &__card__img {
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 11px;
+  }
+  &__card__info {
+  }
+  &__card__list {
+    display: flex;
+    gap: 29px;
+    flex-direction: column;
+    margin-bottom: 29px;
+  }
+  &__card__point {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    max-height: 30px;
+  }
+  &__card__icon {
+    margin-top: -18px;
+  }
+
+  &__card__text {
+    margin: 0;
+    line-height: 19px;
+  }
+  &__card__price {
+    position: relative;
+    margin-bottom: 23px;
+
+    &-block {
+      display: inline-block;
+      position: relative;
+    }
+
+    &-icon {
+      position: absolute;
+      top: -12px;
+      right: -18px;
+    }
+
+    &-detailed {
+      position: absolute;
+      top: -145px;
+      left: 65px;
+      z-index: 10;
+      display: none;
+      background: gray;
+    }
+
+    &-icon:hover + &-detailed {
+      display: block;
+    }
+
+    &-icon {
+      @include any-hover() {
+        .list__card__price-icon &-detailed {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__card__ruble {
+    color: #9c9c9c;
+  }
+}
+
+@include media($laptop) {
+  .list {
+    &__card__img {
+    }
+  }
+}
+
+@include media($tablet) {
+  .list {
+    &__tiles {
+      margin-bottom: 30px;
+    }
+    &__tile {
+      font-size: rem(18);
+    }
+    &__card__title {
+      font-size: rem(25);
+      margin-bottom: 40px;
+    }
+  }
+}
+
+@include media($mobile-tablet) {
+  .list {
+    &__tiles {
+      margin-bottom: 30px;
+    }
+    &__tile {
+      font-size: rem(18);
+    }
+
+    &__card {
+      &__list {
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      &__img {
+      }
+      &__title {
+        font-size: rem(25);
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

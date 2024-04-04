@@ -1,0 +1,277 @@
+.single {
+  &__item {
+    display: flex;
+    gap: 70px;
+    margin-bottom: 100px;
+  }
+  &__gallery {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 40%;
+    gap: 40px;
+  }
+  &__image {
+    border-radius: 20px;
+    background-color: #f7f6f9;
+    width: 530px;
+    height: 530px;
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  &__big-img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    object-position: bottom;
+    object-fit: cover;
+  }
+  &__images {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 -15px;
+    gap: 30px 0;
+  }
+
+  .small-img__container {
+    padding: 0 15px;
+    width: calc(100% / 3);
+    min-height: 150px;
+    margin-top: 0;
+  }
+
+  &__small-img {
+    background-color: #f7f6f9;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  &__info {
+    flex: 1 1 60%;
+  }
+  &__title {
+    margin-bottom: 50px;
+  }
+  &__text {
+    margin-bottom: 50px;
+  }
+  &__price {
+    font-weight: 400;
+    font-size: rem(32);
+    span {
+      font-weight: 700;
+      color: #ff8500;
+    }
+    margin-bottom: 35px;
+  }
+  &__buttons {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 60px;
+  }
+  &__button {
+    padding: 25px 70px;
+    text-align: center;
+    background-color: $orange;
+    border-radius: 10px;
+
+    &-light {
+      background-color: #f7f6f9;
+    }
+  }
+  &__characteristics {
+  }
+  &__subtitle {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 100%;
+    color: #000;
+    margin-bottom: 35px;
+  }
+  &__characteristics__list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 0 -10px;
+    gap: 20px 0;
+  }
+  &__characteristic {
+    &__point {
+      padding: 0 10px;
+      width: 50%;
+    }
+
+    &__icon {
+    }
+
+    &__text {
+    }
+  }
+
+  &__size {
+  }
+
+  &__img-link {
+    height: 100%;
+  }
+}
+
+.single__size {
+  position: relative;
+  padding: 50px;
+  background-color: #f7f6f9;
+  text-align: center;
+  border-radius: 25px;
+  margin-bottom: 100px;
+
+  &-list {
+    display: flex;
+    margin: 0 -100px;
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+  &-element {
+    padding: 0 100px;
+    width: 50%;
+  }
+  &-element__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      margin: 0;
+    }
+  }
+  &-element-name {
+    font-size: 24px;
+    color: #000;
+  }
+  &-element-value {
+    margin-top: 0;
+    font-size: 24px;
+    color: #888;
+  }
+
+  &__rule {
+    position: absolute;
+    height: 100%;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+  }
+}
+
+.single__plus {
+  &__list {
+    display: flex;
+    margin: 0 -40px;
+    flex-wrap: wrap;
+    gap: 30px 0;
+  }
+  &-element {
+    padding: 0 40px;
+    // flex: 1 1 50%;
+  }
+  &-element__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    p {
+      margin: 0;
+    }
+  }
+  &-element__image {
+    height: 35px;
+    width: 35px;
+    background-color: $orange;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+    }
+  }
+  &-element__text {
+    font-size: 24px;
+    color: #888;
+
+    span {
+      color: #000;
+    }
+  }
+}
+
+@include media($tablet) {
+  .single {
+    &__item {
+      gap: 50px;
+      margin-bottom: 75px;
+      flex-direction: column;
+    }
+    &__gallery {
+      gap: 30px;
+    }
+    &__image {
+      max-width: 530px;
+      max-height: 530px;
+      position: relative;
+    }
+    &__images {
+      margin: 0 -15px;
+      gap: 30px 0;
+    }
+
+    .small-img__container {
+      padding: 0 15px;
+      width: calc(100% / 3);
+    }
+
+    &__small-img {
+    }
+
+    &__info {
+      flex: 1 1 60%;
+    }
+    &__title {
+      margin-bottom: 50px;
+    }
+    &__text {
+      margin-bottom: 50px;
+    }
+    &__price {
+      font-weight: 400;
+      font-size: rem(32);
+      margin-bottom: 35px;
+    }
+    &__buttons {
+      gap: 50px;
+      margin-bottom: 60px;
+    }
+    &__button {
+      padding: 25px 70px;
+      text-align: center;
+    }
+    &__subtitle {
+      font-size: 24px;
+      margin-bottom: 35px;
+    }
+    &__characteristics__list {
+      max-width: 80%;
+      margin: 0 -10px;
+      gap: 20px 0;
+    }
+    &__characteristic {
+      &__point {
+        padding: 0 10px;
+        width: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.about {
+  padding: 0;
+
+  p {
+    font-size: 24px !important;
+  }
+
+  &__company {
+    padding: 50px;
+    background-color: #f7f6f9;
+    border-radius: 25px;
+  }
+
+  &__title {
+    margin-top: 100px;
+  }
+
+  &__mission {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+
+    img {
+      border-radius: 25px;
+      object-fit: cover;
+      max-width: 546px;
+    }
+
+    div {
+      border-radius: 25px;
+      background-color: #f7f6f9;
+      padding: 50px;
+    }
+  }
+}

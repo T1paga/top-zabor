@@ -19,13 +19,15 @@
     padding: 25px;
 
     .learn-more {
-      width: 155px;
+      width: 150px;
       height: 45px;
+      border-radius: 10px !important;
     }
 
     .circle {
       height: 45px !important;
       width: 45px !important;
+      border-radius: 10px !important;
     }
 
     .learn-more .button-text {
@@ -33,6 +35,10 @@
       width: 45px;
       font-size: 12px;
       margin: 0 0 0 20px;
+    }
+
+    button:hover .button-text {
+      margin: 0 0 0 0.5rem !important;
     }
   }
 

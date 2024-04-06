@@ -1,0 +1,134 @@
+.blog {
+  padding: 0 15px;
+
+  &__container {
+    margin: 0 -14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0px;
+  }
+  &__card {
+    flex: 0 0 25%;
+    padding: 0 14px;
+  }
+
+  &__card__container {
+    border-radius: 15px;
+    background-color: #f7f6f9;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+
+  &__date {
+    width: 50px;
+    height: 50px;
+    background-color: $orange;
+    font-size: 12px;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span {
+      font-size: 20px;
+      display: block;
+      line-height: 0.6;
+    }
+  }
+
+  &__card__img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+    flex: 0 0 240px;
+  }
+
+  &__card__info {
+    padding: 25px;
+
+    h2 {
+      font-size: 24px;
+      line-height: 100%;
+      color: #000;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 14px;
+      max-width: 70%;
+    }
+  }
+
+  &__button {
+    background-color: $orange;
+    width: 100%;
+    border-radius: 10px;
+    padding: 25px 0;
+    transition: background-color 0.3s ease;
+
+    @include any-hover() {
+      background-color: $orangeHover;
+    }
+  }
+}
+
+@include media($tablet) {
+  .blog {
+    padding: 0 15px;
+
+    &__card__img {
+      flex: 0 0 200px;
+    }
+
+    &__card__info {
+      padding: 15px;
+
+      h2 {
+        font-size: 16px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        font-size: 12px;
+        max-width: 100%;
+        margin: 0 0 12px 0;
+      }
+    }
+
+    &__button {
+      font-size: 12px;
+      padding: 15px 0;
+      transition: background-color 0.3s ease;
+    }
+  }
+}
+
+@include media($mobile-tablet) {
+  .blog {
+    &__date {
+      top: 15px;
+      left: 15px;
+    }
+
+    &__card__img {
+      flex: 0 0 180px;
+    }
+
+    &__card {
+      flex: 0 0 calc(100% / 3);
+    }
+  }
+}
+
+@include media($mobile) {
+  .blog {
+    &__card {
+      flex: 0 0 50%;
+    }
+  }
+}

@@ -222,12 +222,12 @@
 
   .catalog {
     &__title {
-      font-size: rem(20);
-      margin-bottom: 20px;
+      font-size: rem(15);
+      margin-bottom: 15px;
     }
     &__card__container {
       padding: 15px;
-      height: 280px;
+      height: 260px;
     }
     &__card__title {
       font-size: 18px;
@@ -235,6 +235,45 @@
     }
     &__card__list {
       gap: 12px;
+    }
+    &__card__text {
+      font-size: 10px;
+    }
+    &__card__img {
+      max-width: 50%;
+    }
+  }
+}
+
+@include media(400) {
+  .button-absolute {
+    left: 20px !important;
+    bottom: 10px !important;
+  }
+
+  .catalog {
+    &__title {
+      font-size: rem(15);
+      margin-bottom: 15px;
+    }
+    &__card__container {
+      padding: 15px;
+      height: 260px;
+
+      .learn-more {
+        width: 140px;
+      }
+
+      .button-text {
+        padding: 0 35px !important;
+      }
+    }
+    &__card__title {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+    &__card__list {
+      gap: 10px;
     }
     &__card__text {
       font-size: 10px;

@@ -102,6 +102,11 @@ select {
   }
 }
 
+input[type='checkbox'] {
+  transition: accent-color 0.3s ease;
+  accent-color: $orange;
+}
+
 textarea {
   &:focus {
     border-color: $btnHoverColor;

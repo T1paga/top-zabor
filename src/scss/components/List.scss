@@ -65,24 +65,28 @@
       right: -18px;
     }
 
+    .price-show {
+      opacity: 1;
+    }
+
     &-detailed {
       position: absolute;
-      top: -145px;
-      left: 65px;
+      bottom: 50px;
+      left: 45px;
       z-index: 10;
       display: none;
-      background: gray;
-    }
+      backdrop-filter: blur(5.699999809265137px);
+      background: rgba(255, 255, 255, 0.94);
+      border-radius: 10px 10px 10px 0;
+      padding: 15px 10px;
 
-    &-icon:hover + &-detailed {
-      display: block;
-    }
+      img {
+        margin-bottom: 7px;
+      }
 
-    &-icon {
-      @include any-hover() {
-        .list__card__price-icon &-detailed {
-          opacity: 1;
-        }
+      p {
+        margin: 0;
+        padding: 0;
       }
     }
   }
@@ -111,6 +115,13 @@
       font-size: rem(25);
       margin-bottom: 40px;
     }
+
+    &__card__price {
+      &-detailed {
+        bottom: 45px;
+        left: 30px;
+      }
+    }
   }
 }
 
@@ -133,6 +144,17 @@
       &__title {
         font-size: rem(25);
         margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+@include media($mobile) {
+  .list {
+    &__card__price {
+      &-detailed {
+        bottom: 40px;
+        left: 27px;
       }
     }
   }

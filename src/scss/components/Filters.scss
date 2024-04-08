@@ -249,18 +249,21 @@ $white: mix($dark, white, 20%);
   display: block;
   opacity: 1;
   transition: opacity 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 .filters.show-filters {
-  display: block;
+  height: 100%;
   opacity: 1;
   transition: opacity 0.3s ease;
+  transition: height 0.3s ease;
 }
 
 @include media($mobile-tablet) {
   .filters {
-    display: none;
+    height: 0;
     opacity: 0;
     transition: opacity 0.3s ease;
+    transition: height 0.3s ease;
   }
 }

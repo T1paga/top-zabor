@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { 'title': 'Каталог | Топ забор' })
+  <body>
+    @@include('html/Header.html', {})
+    <main class="main container">
+      <section class="size">
+        <div class="size__image">
+          <img src="./images/services/services1.png" alt="" />
+        </div>
+        <div class="size__info">
+          <h2 class="size__title block__title block__title-right">Замеры</h2>
+          <p class="size__text">
+            Опытные специалисты смогут <br />
+            точно измерить все параметрывашего забора
+          </p>
+          <div class="size__buttons">
+            <button class="size__button">Оставить заявку</button>
+            <button class="size__button size__button-gray">
+              Получить консультацию
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <h2 class="single__title block__title block__title-right">Размеры</h2>
+      <div class="single__size">
+        <img
+          class="single__size__rule"
+          src="../images/single/rules.png"
+          alt=""
+        />
+        <div class="single__size-list">
+          <div class="single__size-element">
+            <div class="single__size-element__container">
+              <p class="single__size-element-name">Профессиональный подход</p>
+              <p class="single__size-element-value">
+                <img src="./images/icons/price-detail.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="single__size-element">
+            <div class="single__size-element__container">
+              <p class="single__size-element-name">
+                Оценка состояния и качества
+              </p>
+              <p class="single__size-element-value">
+                <img src="./images/icons/price-detail.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="single__size-element">
+            <div class="single__size-element__container">
+              <p class="single__size-element-name">
+                Разработка индивидуального проекта
+              </p>
+              <p class="single__size-element-value">
+                <img src="./images/icons/price-detail.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="single__size-element">
+            <div class="single__size-element__container">
+              <p class="single__size-element-name">Расчет стоимости и сроков</p>
+              <p class="single__size-element-value">
+                <img src="./images/icons/price-detail.svg" alt="" />
+              </p>
+            </div>
+          </div>
+          <div class="single__size-element">
+            <div class="single__size-element__container">
+              <p class="single__size-element-name">Консультация и советы</p>
+              <p class="single__size-element-value">
+                <img src="./images/icons/price-detail.svg" alt="" />
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      @@include('html/Examples.html', {}) @@include('html/Services.html', {})
+      @@include('html/Socials.html', {}) @@include('html/Contacts.html', {})
+    </main>
+    @@include('html/Footer.html', {}) @@include('html/script.html', {})
+  </body>
+</html>

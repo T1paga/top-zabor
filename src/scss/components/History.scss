@@ -1,0 +1,275 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes drawLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.history__container {
+  background-color: $lightGray;
+}
+
+.history {
+  height: 650px;
+
+  &__title {
+    margin-bottom: 0px !important;
+  }
+
+  &__container {
+    border-radius: 10px;
+    padding: 50px;
+  }
+
+  &__steps {
+    transform: translateY(-27px);
+  }
+
+  &__steps--down {
+    transform: translateY(27px);
+  }
+
+  &__steps--container {
+    position: relative;
+    display: flex;
+    margin: 0 -29px;
+  }
+
+  &__steps--container--down {
+    position: relative;
+    display: flex;
+    margin: 0 -29px;
+  }
+
+  &__step {
+    flex: 0 1 calc(100% / 6);
+    padding: 0 29px;
+  }
+
+  &__step--down {
+    flex: 0 1 calc(100% / 6);
+    padding: 0 29px;
+  }
+
+  &__step--container {
+  }
+
+  &__step--info {
+    position: relative;
+    padding: 18px 0px;
+    background-color: #959194;
+    border-radius: 8px;
+    font-size: rem(15);
+    color: white;
+    text-align: center;
+    opacity: 0;
+  }
+
+  &__step--info--down {
+    position: relative;
+    padding: 18px 0px;
+    background-color: #959194;
+    border-radius: 8px;
+    font-size: rem(15);
+    color: white;
+    text-align: center;
+    transform: translateX(50%);
+  }
+}
+
+.buttom-line--history {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 46.5%;
+  height: 3px;
+  width: 100%;
+  border-bottom: 3px solid #d5d5d5;
+}
+
+.step__circle {
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(16);
+  height: rem(16);
+  background-color: $white;
+  border-radius: 100%;
+}
+
+.step__circle--down {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: rem(16);
+  height: rem(16);
+  background-color: $white;
+  border-radius: 100%;
+}
+
+.step__circle::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(8);
+  height: rem(8);
+  background-color: #959194;
+  border-radius: 100%;
+}
+
+.step__circle--down::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: rem(8);
+  height: rem(8);
+  background-color: #959194;
+  border-radius: 100%;
+}
+
+.history__step--info:after {
+  content: '';
+  position: absolute;
+  left: calc(50% + 1px);
+  bottom: 0;
+  width: 2px;
+  border-left: 2px dashed #ccc;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 1;
+}
+
+.history__step--info--down:after {
+  content: '';
+  position: absolute;
+  left: calc(50% + 1px);
+  top: 0;
+  width: 2px;
+  border-left: 2px dashed #ccc;
+  transform: translateX(-50%);
+  z-index: -1;
+  opacity: 1;
+  height: 200px;
+}
+
+.history__step--info.dynamic:after {
+  top: calc(var(--stepHeight, 0px));
+  height: calc(var(--diff, 0px));
+}
+
+.history__step--info--down.dynamic:after {
+  top: calc(var(--stepHeightDown, 0px));
+  height: calc(var(--stepTopMargin, 0px));
+}
+
+.history-mobile {
+  .history__title {
+    margin-bottom: 50px !important;
+  }
+
+  display: none;
+}
+
+.order-track {
+  display: flex;
+  flex-direction: column;
+
+  &-step {
+    display: flex;
+    height: 7rem;
+    opacity: 1;
+
+    &:last-child {
+      overflow: hidden;
+      height: 4rem;
+      & .order-track-status span:last-of-type {
+        display: none;
+      }
+    }
+  }
+
+  &-status {
+    margin-right: 1.5rem;
+    position: relative;
+
+    &-dot {
+      display: block;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: $white;
+      position: relative;
+    }
+
+    &-dot::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 50%;
+      background: #959194;
+    }
+
+    &-line {
+      display: block;
+      margin: 0 auto;
+      width: 2px;
+      height: 7rem;
+      background: #959194;
+    }
+  }
+
+  &-text {
+    &-stat {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 3px;
+    }
+
+    &-sub {
+      font-size: 1rem;
+      font-weight: 300;
+    }
+  }
+}
+
+.order-track {
+  transition: all 0.3s height 0.3s;
+  transform-origin: top center;
+}
+
+.order-track-status-line {
+  opacity: 0;
+}
+
+@include media($tablet) {
+  .history {
+    display: none;
+  }
+
+  .history-mobile {
+    display: block;
+  }
+}

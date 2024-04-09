@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
   step.style.flex = `0 0 ${Math.floor(100 / steps.length)}%`;
 
   let tempDistance = 0;
+  let tempMaxHeight = 100;
 
   if (steps.length) {
     steps.forEach(function (step, index) {
@@ -16,9 +17,13 @@ document.addEventListener('DOMContentLoaded', function () {
       const diff = stepHeight - baseStepHeight;
 
       step.style.setProperty('--stepHeight', `${stepHeight}px`);
+      step.style.setProperty('--maxHeight', `${tempMaxHeight}px`);
+      step.classList.add('dynamic');
+      tempMaxHeight = tempMaxHeight + 33;
 
       if (index === 0) {
         step.style.setProperty('--diff', `${baseStepHeight - diff}px`);
+      } else if (index === steps.length - 1) {
       } else {
         step.style.setProperty(
           '--diff',
@@ -26,27 +31,35 @@ document.addEventListener('DOMContentLoaded', function () {
         );
       }
 
-      step.classList.add('dynamic');
-
       const elementStyles = step.style;
       elementStyles.marginTop = `${165 - tempDistance}px`;
       elementStyles.animation = 'slideInFromLeft 0.5s ease forwards';
-      elementStyles.animationDelay = `${0.5 + index * 0.5}s`;
+      elementStyles.animationDelay = `${index}s`;
 
       if (index === steps.length - 1) {
         elementStyles.backgroundColor = '#ff8500';
         elementStyles.color = `#000`;
+        elementStyles.height = '265px';
+      }
+
+      if (index !== steps.length - 1) {
+        step.addEventListener('mouseover', function () {
+          step.style.setProperty('--opacity', `0`);
+        });
+
+        step.addEventListener('mouseout', function () {
+          step.style.setProperty('--opacity', `1`);
+        });
       }
 
       tempDistance = tempDistance + distanceByStep;
     });
   }
 
-  tempDistance = 33;
-  startTop = 50;
-
   if (stepsDown.length) {
     stepsDown.forEach(function (step, index) {
+      const maxHeight = 100;
+
       step.style.setProperty(
         '--stepTopMargin',
         `${50 + distanceByStep * index}px`
@@ -54,12 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
       step.style.setProperty(
         '--stepHeightDown',
-        `${(50 + distanceByStep * index) * -1}px`
+        `${(55 + distanceByStep * index) * -1}px`
       );
 
       const elementStyles = step.style;
       elementStyles.marginTop = `${50 + distanceByStep * index}px`;
       step.classList.add('dynamic');
+      elementStyles.animation = 'slideInFromLeftDown 0.5s ease forwards';
+      elementStyles.animationDelay = `${0.5 + index * 1}s`;
+
+      step.addEventListener('mouseover', function () {});
+
+      step.addEventListener('mouseout', function () {});
     });
   }
 });

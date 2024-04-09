@@ -236,11 +236,13 @@
       }
 
       &-element-name {
-        font-size: 16px;
+        font-size: 16px !important;
+        text-align: start;
       }
       &-element-value {
         margin-top: 0;
         font-size: 16px;
+        text-align: end;
       }
     }
 
@@ -317,7 +319,7 @@
 @include media($mobile-tablet) {
   .single {
     &__size {
-      padding: 30px;
+      padding: 30px !important;
 
       &__container {
         gap: 10px;
@@ -329,14 +331,49 @@
 
       &-element {
         padding: 0;
-        width: 100%;
+        width: 100% !important;
       }
 
       &-element-name {
         font-size: 12px;
+        max-width: 110px;
       }
       &-element-value {
         font-size: 12px;
+        max-width: 110px;
+        text-align: end;
+      }
+    }
+  }
+}
+
+@include media($mobile) {
+  .single {
+    &__size {
+      padding: 20px !important;
+
+      &__rule {
+        object-fit: cover;
+      }
+
+      &__container {
+        gap: 10px;
+      }
+
+      &-list {
+        flex-direction: column;
+      }
+
+      &-element {
+        padding: 0;
+        width: 100% !important;
+      }
+
+      &-element-name {
+        font-size: 12px !important;
+      }
+      &-element-value {
+        font-size: 12px !important;
       }
     }
   }

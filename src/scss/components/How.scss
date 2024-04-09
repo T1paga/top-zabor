@@ -57,8 +57,8 @@
     font-size: rem(15);
     color: white;
     text-align: center;
-    white-space: nowrap;
-    height: 50px;
+    // white-space: nowrap;
+    // height: 50px;
     opacity: 0;
   }
 }
@@ -98,88 +98,23 @@
   height: rem(8);
   background-color: #959194;
   border-radius: 100%;
-
-  //anim
-  //   opacity: 0;
-  //   @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
 }
 
 .how__step--info:after {
   content: '';
   position: absolute;
   left: calc(50% + 1px);
-  top: 55px;
+  top: 0;
   width: 2px;
   border-left: 2px dashed #ccc;
   transform: translateX(-50%);
   z-index: -1;
   opacity: 1;
-
-  //anim
-  //   opacity: 0;
-  //   @include transition(opacity, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
 }
 
-#step1 {
-  margin-top: rem(165);
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 0.5s;
-
-  &::after {
-    height: calc(100%);
-  }
-}
-
-#step2 {
-  margin-top: rem(132);
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 1s;
-
-  &::after {
-    height: calc(100% + 33px);
-  }
-}
-
-#step3 {
-  margin-top: rem(99);
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 1.5s;
-
-  &::after {
-    height: calc(100% + 66px);
-  }
-}
-
-#step4 {
-  margin-top: rem(66);
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 2s;
-
-  &::after {
-    height: calc(100% + 99px);
-  }
-}
-
-#step5 {
-  margin-top: rem(33);
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 2.5s;
-
-  &::after {
-    height: calc(100% + 132px);
-  }
-}
-
-#step6 {
-  margin-top: rem(0);
-  background-color: $orange;
-  color: #000;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 3s;
-
-  &::after {
-    height: calc(100% + 165px);
-  }
+.how__step--info.dynamic:after {
+  top: calc(var(--stepHeight, 0px));
+  height: calc(var(--diff, 0px));
 }
 
 .how-mobile {
@@ -261,6 +196,10 @@
   transform-origin: top center;
 }
 
+.order-track-status-line {
+  opacity: 0;
+}
+
 @include media($tablet) {
   .how {
     display: none;
@@ -268,72 +207,5 @@
 
   .how-mobile {
     display: block;
-  }
-}
-
-#step1-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 0s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 0.25s;
-  }
-}
-#step2-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 0.5s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 0.75s;
-  }
-}
-#step3-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 1s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 1.25s;
-  }
-}
-#step4-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 1.5s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 1.75s;
-  }
-}
-#step5-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 2s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 2.25s;
-  }
-}
-#step6-mobile {
-  opacity: 0;
-  animation: slideInFromLeft 0.5s ease forwards;
-  animation-delay: 2.5s;
-
-  .order-track-status-line {
-    opacity: 0;
-    animation: slideInFromLeft 1s ease forwards;
-    animation-delay: 2.75s;
   }
 }

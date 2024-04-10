@@ -1,4 +1,40 @@
+.nav-list {
+  font-size: 1.5rem;
+}
+
+.header__burger-menu-link {
+  font-size: 1.5rem;
+}
+
 .header__burger-btn {
   background-color: $orange;
   border-radius: 5px;
+}
+
+.header__text-burger {
+  padding: 20px;
+  display: none;
+  font-size: 16px;
+
+  p {
+    font-size: 16px !important;
+  }
+}
+
+.header__socials-burger {
+  padding: 20px;
+  display: none;
+}
+
+@include media($tablet) {
+  .header__text-burger {
+    display: block;
+  }
+}
+
+@include media($mobile) {
+  .header__socials-burger {
+    display: flex;
+    gap: 20px;
+  }
 }

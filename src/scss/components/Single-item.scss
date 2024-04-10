@@ -349,6 +349,24 @@
 
 @include media($mobile) {
   .single {
+    &__gallery {
+      display: block;
+    }
+
+    &__image {
+      height: 400px;
+      object-fit: cover;
+      margin-bottom: 30px;
+    }
+
+    .small-img__container {
+      width: calc(100% / 4);
+      height: 100px;
+      max-height: 100px;
+      min-height: 100px;
+      object-fit: cover;
+    }
+
     &__size {
       padding: 20px !important;
 

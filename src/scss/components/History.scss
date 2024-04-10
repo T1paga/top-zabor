@@ -200,13 +200,13 @@
 .history__step--info.dynamic:after {
   top: calc(var(--stepHeight, 0px));
   height: calc(var(--diff, 0px));
-  opacity: calc(var(--opacity), 0px);
+  opacity: calc(var(--opacity, 0px));
 }
 
 .history__step--info--down.dynamic:after {
   top: calc(var(--stepHeightDown, 0px));
   height: calc(var(--stepTopMargin, 0px));
-  opacity: calc(var(--opacityDown), 0px);
+  opacity: calc(var(--opacityDown, 0px));
 }
 
 .history-mobile {

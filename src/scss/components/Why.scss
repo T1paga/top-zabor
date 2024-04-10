@@ -12,6 +12,12 @@
   }
 
   &__card {
+    p {
+      color: #000;
+      margin: 16px 0 0 0;
+      padding: 0;
+      line-height: 1.1rem;
+    }
   }
 
   &__card__container {

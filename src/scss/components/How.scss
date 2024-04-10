@@ -173,7 +173,7 @@
       margin: 0 auto;
       width: 2px;
       height: 7rem;
-      background: #959194;
+      background-color: #f7f6f9 !important;
     }
   }
 
@@ -198,6 +198,9 @@
 
 .order-track-status-line {
   opacity: 0;
+  background: transparent;
+  width: 0;
+  border-right: 3px dashed #ccc;
 }
 
 @include media($tablet) {

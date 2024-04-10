@@ -41,3 +41,11 @@
   background-color: none !important;
   height: 465px;
 }
+
+@include media($mobile) {
+  .examples {
+    &__card {
+      height: 400px;
+    }
+  }
+}

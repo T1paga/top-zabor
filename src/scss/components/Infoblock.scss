@@ -141,6 +141,8 @@
     &__button {
       padding: 10px 0px;
       width: 100%;
+      max-width: 100%;
+      min-width: 100%;
     }
 
     &__button--accent {

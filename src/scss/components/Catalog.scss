@@ -216,8 +216,8 @@
 
 @include media($mobile) {
   .button-absolute {
-    left: 20px !important;
-    bottom: 20px !important;
+    left: 30px !important;
+    bottom: 30px !important;
   }
 
   .catalog {
@@ -248,7 +248,7 @@
 @include media(400) {
   .button-absolute {
     left: 20px !important;
-    bottom: 10px !important;
+    bottom: 20px !important;
   }
 
   .catalog {

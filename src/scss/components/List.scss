@@ -157,5 +157,13 @@
         left: 27px;
       }
     }
+
+    &__card__container {
+      height: 400px;
+    }
+
+    &__card__img {
+      max-width: 50%;
+    }
   }
 }

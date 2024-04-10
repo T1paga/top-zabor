@@ -3,6 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const filters = document.querySelector('.filters');
 
   openFiltersButton.addEventListener('click', function () {
-    filters.classList.toggle('show-filters'); // Переключаем класс для открытия и закрытия фильтров
+    filters.classList.toggle('show-filters');
   });
 });

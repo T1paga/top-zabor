@@ -327,16 +327,65 @@ document.addEventListener('DOMContentLoaded', (event) => {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const priceIcon = document.querySelector('.list__card__price-icon');
-  const priceDetailed = document.querySelector('.list__card__price-detailed');
+  const priceBlocks = document.querySelectorAll('.list__card__price');
 
-  if (priceIcon && priceDetailed) {
-    priceIcon.addEventListener('mouseenter', function () {
-      priceDetailed.style.display = 'block';
+  if (priceBlocks.length) {
+    priceBlocks.forEach((block) => {
+      const priceIcon = block.querySelector('.list__card__price-icon');
+      const priceDetailed = block.querySelector('.list__card__price-detailed');
+
+      if (priceIcon && priceDetailed) {
+        priceIcon.addEventListener('mouseenter', function () {
+          closeAllPriceDetailedBlocks();
+          priceDetailed.style.display = 'block';
+        });
+
+        priceDetailed.addEventListener('mouseleave', function () {
+          priceDetailed.style.display = 'none';
+        });
+      }
     });
+  }
 
-    priceDetailed.addEventListener('mouseleave', function () {
-      priceDetailed.style.display = 'none';
+  function closeAllPriceDetailedBlocks() {
+    const allPriceDetailedBlocks = document.querySelectorAll(
+      '.list__card__price-detailed'
+    );
+    allPriceDetailedBlocks.forEach((block) => {
+      block.style.display = 'none';
+    });
+  }
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  const infoBlocks = document.querySelectorAll(
+    '.single__size-element__container'
+  );
+
+  if (infoBlocks.length) {
+    infoBlocks.forEach((block) => {
+      const icon = block.querySelector('.single__size-element-value');
+      const detailed = block.querySelector('.single__size-element-detailed');
+
+      if (icon && detailed) {
+        icon.addEventListener('mouseenter', function () {
+          closeAllDetailedBlocks();
+          detailed.style.display = 'block';
+        });
+
+        detailed.addEventListener('mouseleave', function () {
+          detailed.style.display = 'none';
+        });
+      }
+    });
+  }
+
+  function closeAllDetailedBlocks() {
+    const allDetailedBlocks = document.querySelectorAll(
+      '.single__size-element-detailed'
+    );
+    allDetailedBlocks.forEach((block) => {
+      block.style.display = 'none';
     });
   }
 });

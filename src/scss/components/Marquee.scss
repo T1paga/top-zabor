@@ -76,13 +76,13 @@
   animation-direction: reverse;
 }
 
-.items-wrap {
-  .marquee {
-    @include any-hover() {
-      animation-play-state: paused;
-    }
-  }
-}
+// .items-wrap {
+//   .marquee {
+//     @include any-hover() {
+//       animation-play-state: paused;
+//     }
+//   }
+// }
 
 .marquee-img {
   object-fit: cover;

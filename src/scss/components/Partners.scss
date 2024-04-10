@@ -1,6 +1,8 @@
 .conditions {
   margin-top: 0;
-  background: url('../../images/partners/bg.png') no-repeat center / cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   &:before {
     content: '';

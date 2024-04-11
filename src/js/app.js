@@ -161,38 +161,27 @@ async function CallbackFormInit() {
 }
 
 function LoadMapOnScroll() {
-  let isMapAppend = false;
-  let mapNode = document.querySelector('.map');
-  if (mapNode) {
-    document.addEventListener('scroll', (event) => {
-      if (!isMapAppend) {
-        if (window.scrollY > 1000) {
-          let script = document.createElement('script');
+  let mapNodes = document.querySelectorAll('.contacts__map');
 
-          script.src =
-            'https://nalogsib.ru/wp-content/themes/NalogSib/js/map.js';
-          script.type = 'text/javascript';
+  mapNodes.forEach((mapNode) => {
+    let isMapLoaded = false;
 
-          mapNode.append(script);
-          isMapAppend = true;
+    let observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !isMapLoaded) {
+          let iframe = mapNode.querySelector('.contacts__frame');
+          iframe.src = mapNode.dataset.src;
+          iframe.width = mapNode.dataset.width;
+          iframe.height = mapNode.dataset.height;
+
+          isMapLoaded = true;
+          observer.unobserve(mapNode);
         }
-      }
-    });
-  }
-}
-
-async function InitCenteredSliders() {
-  let centeredSliders = document.querySelectorAll('.slider_centered');
-  if (centeredSliders.length > 0) {
-    centeredSliders.forEach((centeredSlider) => {
-      let lastSlide = document.querySelector('.slider_centered__item_center');
-      UIkit.util.on(centeredSlider, 'itemshown', (event) => {
-        lastSlide.classList.remove('slider_centered__item_center');
-        event.target.classList.add('slider_centered__item_center');
-        lastSlide = event.target;
       });
     });
-  }
+
+    observer.observe(mapNode);
+  });
 }
 
 async function EnableSubmitOnCheckbox() {
@@ -304,29 +293,7 @@ async function InitLoadMorePosts() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  // ASYNC
-  InitCenteredSliders(); // Преключение класса центрального слайда при свайпах
-  CallbackFormInit(); // Инцициализация всех форм (Маска тел. + ajax на submit)
-  EnableSubmitOnCheckbox(); // Активация submit только после согласия с политикой
-  // InitLoadMorePosts();        // Инит кнопки "Загрузить еще" для постов, см. WP ExBlog.php, functions.php
-  // END ASYNC
-
-  InitCityPopup();
-  InitCookieAgree();
-
-  // InsertPostContents();    // Содержание статьи по заголовкам
-  // LoadMapOnScroll();       // Прогрузка карты при скролле
-
-  if (isTablet) {
-    InitBurgerMenu();
-  }
-
-  // Наложение партикла
-  // particlesJS.load('particles-slider', 'static/ParticlesJSON/GreenHexagons.json');
-});
-
-document.addEventListener('DOMContentLoaded', function () {
+function priceAdditional() {
   const priceBlocks = document.querySelectorAll('.list__card__price');
 
   if (priceBlocks.length) {
@@ -355,9 +322,9 @@ document.addEventListener('DOMContentLoaded', function () {
       block.style.display = 'none';
     });
   }
-});
+}
 
-document.addEventListener('DOMContentLoaded', function () {
+function companyAdvantages() {
   const infoBlocks = document.querySelectorAll(
     '.single__size-element__container'
   );
@@ -388,4 +355,28 @@ document.addEventListener('DOMContentLoaded', function () {
       block.style.display = 'none';
     });
   }
+}
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  // ASYNC
+  CallbackFormInit(); // Инцициализация всех форм (Маска тел. + ajax на submit)
+  EnableSubmitOnCheckbox(); // Активация submit только после согласия с политикой
+  // InitLoadMorePosts();        // Инит кнопки "Загрузить еще" для постов, см. WP ExBlog.php, functions.php
+  // END ASYNC
+
+  InitCityPopup();
+  InitCookieAgree();
+
+  // InsertPostContents();    // Содержание статьи по заголовкам
+  LoadMapOnScroll(); // Прогрузка карты при скролле
+
+  priceAdditional();
+  companyAdvantages();
+
+  if (isTablet) {
+    InitBurgerMenu();
+  }
+
+  // Наложение партикла
+  // particlesJS.load('particles-slider', 'static/ParticlesJSON/GreenHexagons.json');
 });

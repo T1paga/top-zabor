@@ -50,7 +50,7 @@
       transition: background-color 0.3s ease;
 
       @include any-hover() {
-        background-color: white;
+        background-color: #fff;
       }
     }
   }

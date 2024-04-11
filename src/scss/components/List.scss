@@ -61,8 +61,10 @@
 
     &-icon {
       position: absolute;
-      top: -12px;
+      top: -10px;
       right: -18px;
+      min-width: 0;
+      height: auto;
     }
 
     .price-show {
@@ -71,7 +73,7 @@
 
     &-detailed {
       position: absolute;
-      bottom: 50px;
+      bottom: 45px;
       left: 45px;
       z-index: 10;
       display: none;

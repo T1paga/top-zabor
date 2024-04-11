@@ -186,23 +186,25 @@ button {
   padding: 0;
   font-size: inherit;
   font-family: inherit;
+  min-width: 214px;
+  width: max-content;
+  height: 60px;
 
   &.learn-more {
     @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-    display: flex;
+    display: inline-flex;
+    align-items: center;
     border-radius: 10px;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
     background-color: $orange;
-    width: 214px;
-    height: 60px;
 
     .circle {
       @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
       border-radius: 10px;
       position: relative;
       display: block;
-      margin: 0;
+      margin: 0 0 0 -1px;
       width: 60px;
       height: 60px;
       background: $white;
@@ -220,7 +222,6 @@ button {
 
         &.arrow {
           @include transition(all, 0.45s, cubic-bezier(0.65, 0, 0.076, 1));
-          //   left: 1.5rem;
           width: 1.125rem;
           height: 0.125rem;
           background: none;
@@ -250,17 +251,19 @@ button {
       left: 0;
       right: 0;
       bottom: 0;
-      padding: 0.75rem 0;
-      margin: 0 0 0 45px;
       color: $btnDarkBgColor;
       line-height: 1.6;
       text-align: right;
-      width: 60px;
-      height: 60px;
+      padding-left: 60px;
       display: flex;
       align-items: center;
-      padding: 0 45px;
       white-space: nowrap;
+      display: flex;
+      justify-content: center;
+    }
+
+    @include any-hover() {
+      background-color: transparent;
     }
   }
 
@@ -287,7 +290,7 @@ button {
 
       .button-text {
         color: $orange;
-        margin: 0 0 0 1.85rem;
+        padding-left: 0px;
       }
     }
   }

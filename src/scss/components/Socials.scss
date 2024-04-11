@@ -79,5 +79,14 @@
     &__air {
       display: none;
     }
+
+    &__list {
+      display: block;
+    }
+
+    .learn-more {
+      margin-top: 20px;
+      width: 100%;
+    }
   }
 }

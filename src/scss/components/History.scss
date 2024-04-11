@@ -305,3 +305,11 @@
 .history__step--info:hover {
   height: var(--maxHeight);
 }
+
+.history__step--info--down {
+  transition: height 0.3s ease;
+}
+
+.history__step--info--down:hover {
+  height: var(--stepTopMargin);
+}

@@ -12,20 +12,22 @@ document.addEventListener('DOMContentLoaded', function () {
   let tempDistance = 0;
   let tempMaxHeight = 100;
 
-  function checkScroll() {
-    const historySectionRect = historySection.getBoundingClientRect();
-    const viewportHeight =
-      window.innerHeight || document.documentElement.clientHeight;
-
-    if (
-      historySectionRect.top < viewportHeight &&
-      historySectionRect.bottom > 0
-    ) {
-      animateHistorySteps();
-      animateHistoryStepsDown();
-      window.removeEventListener('scroll', checkScroll);
-    }
+  function checkScroll(entries, observer) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateHistorySteps();
+        animateHistoryStepsDown();
+        observer.unobserve(historySection);
+      }
+    });
   }
+
+  const observer = new IntersectionObserver(checkScroll, {
+    root: null,
+    threshold: 0.5,
+  });
+
+  observer.observe(historySection);
 
   function animateHistorySteps() {
     if (steps.length) {
@@ -77,7 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
   function animateHistoryStepsDown() {
     if (stepsDown.length) {
       stepsDown.forEach(function (step, index) {
-        const maxHeight = 100;
+        const stepHeight = step.offsetHeight;
+        step.style.setProperty('--stepHeight', `${stepHeight}px`);
 
         step.style.setProperty(
           '--stepTopMargin',
@@ -95,12 +98,25 @@ document.addEventListener('DOMContentLoaded', function () {
         elementStyles.animation = 'slideInFromLeftDown 0.5s ease forwards';
         elementStyles.animationDelay = `${0.5 + index * 1}s`;
 
-        step.addEventListener('mouseover', function () {});
+        step.addEventListener('mouseover', function () {
+          step.style.setProperty('--opacity', `0`);
+          elementStyles.marginTop = `0`;
+          elementStyles.height = `${
+            stepHeight + 50 + distanceByStep * index
+          }px`;
+          step.style.setProperty('--stepTopMargin', `0`);
+        });
 
-        step.addEventListener('mouseout', function () {});
+        step.addEventListener('mouseout', function () {
+          elementStyles.marginTop = `${50 + distanceByStep * index}px`;
+          elementStyles.height = 'auto';
+          step.style.setProperty(
+            '--stepTopMargin',
+            `${50 + distanceByStep * index}px`
+          );
+          step.style.setProperty('--opacity', `1`);
+        });
       });
     }
   }
-
-  window.addEventListener('scroll', checkScroll);
 });

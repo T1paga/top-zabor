@@ -359,6 +359,11 @@
       margin-bottom: 30px;
     }
 
+    &__buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+
     .small-img__container {
       width: calc(100% / 4);
       height: 100px;

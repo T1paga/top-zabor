@@ -307,9 +307,24 @@
 }
 
 .history__step--info--down {
-  transition: height 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.history__step--info--down:hover {
-  height: var(--stepTopMargin);
-}
+// .history__step--info--down:hover {
+//   height: var(--stepTopMargin);
+// }
+
+// .history__step--info--down {
+//   /* Добавьте transition для плавной анимации */
+//   transition: margin-top 0.3s ease, height 0.5s ease;
+//   margin-top: calc(
+//     var(--stepTopMargin, 0px) + 50px
+//   ); /* Начальное значение margin-top */
+//   height: var(--stepHeightDown, 0px); /* Начальное значение высоты */
+// }
+
+// .history__step--info--down:hover {
+//   /* Измените отступ и высоту при наведении */
+//   margin-top: calc(var(--stepTopMargin, 0px) - 50px);
+//   height: calc(var(--stepHeightDown, 0px) + var(--stepTopMargin, 0px));
+// }

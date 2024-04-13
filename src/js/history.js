@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
     root: null,
     threshold: 0.5,
   });
-
   observer.observe(historySection);
 
   function animateHistorySteps() {
@@ -81,6 +80,7 @@ document.addEventListener('DOMContentLoaded', function () {
       stepsDown.forEach(function (step, index) {
         const stepHeight = step.offsetHeight;
         step.style.setProperty('--stepHeight', `${stepHeight}px`);
+        step.style.height = '45.5px';
 
         step.style.setProperty(
           '--stepTopMargin',
@@ -102,14 +102,14 @@ document.addEventListener('DOMContentLoaded', function () {
           step.style.setProperty('--opacity', `0`);
           elementStyles.marginTop = `0`;
           elementStyles.height = `${
-            stepHeight + 50 + distanceByStep * index
+            stepHeight + 30 + distanceByStep * index
           }px`;
           step.style.setProperty('--stepTopMargin', `0`);
         });
 
         step.addEventListener('mouseout', function () {
           elementStyles.marginTop = `${50 + distanceByStep * index}px`;
-          elementStyles.height = 'auto';
+          elementStyles.height = '45.5px';
           step.style.setProperty(
             '--stepTopMargin',
             `${50 + distanceByStep * index}px`
